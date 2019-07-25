@@ -112,7 +112,7 @@
 			
 			var topPosition = product.offsetTop,
 				productQuantity = Number(product.getElementsByTagName('select')[0].value),
-				productTotPrice = Number((product.getElementsByClassName('cd-cart__price')[0].innerText).replace('$', '')) * productQuantity;
+				productTotPrice = Number((product.getElementsByClassName('cd-cart__price')[0].innerText).replace('Rs', '')) * productQuantity;
 
 			product.style.top = topPosition+'px';
 			Util.addClass(product, 'cd-cart__product--deleted');
@@ -181,7 +181,7 @@
 				if( !Util.hasClass(cartListItems[i], 'cd-cart__product--deleted') ) {
 					var singleQuantity = Number(cartListItems[i].getElementsByTagName('select')[0].value);
 					quantity = quantity + singleQuantity;
-					price = price + singleQuantity*Number((cartListItems[i].getElementsByClassName('cd-cart__price')[0].innerText).replace('$', ''));
+					price = price + singleQuantity*Number((cartListItems[i].getElementsByClassName('cd-cart__price')[0].innerText).replace('Rs', ''));
 				}
 			}
 
